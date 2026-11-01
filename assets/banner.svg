@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
+  <defs>
+    <radialGradient id="bgGlow" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#0c1a33" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#05080f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gridFade" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="gridMask"><rect width="1200" height="450" fill="url(#gridFade)"/></mask>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#2a7bff" stroke-opacity="0.12" stroke-width="1"/>
+      <path d="M0 -3V3M-3 0H3" stroke="#5aa8ff" stroke-opacity="0.35" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="arcTR" gradientUnits="userSpaceOnUse" x1="990" y1="0" x2="1200" y2="190">
+      <stop offset="0" stop-color="#2a7bff"/>
+      <stop offset="1" stop-color="#0b3f9e"/>
+    </linearGradient>
+    <linearGradient id="arcBL" gradientUnits="userSpaceOnUse" x1="0" y1="262" x2="260" y2="450">
+      <stop offset="0" stop-color="#1a63e6"/>
+      <stop offset="1" stop-color="#2a7bff"/>
+    </linearGradient>
+    <linearGradient id="blueText" gradientUnits="userSpaceOnUse" x1="660" y1="170" x2="890" y2="226">
+      <stop offset="0" stop-color="#2fa4ff"/>
+      <stop offset="1" stop-color="#0a5cff"/>
+    </linearGradient>
+    <linearGradient id="whiteText" gradientUnits="userSpaceOnUse" x1="498" y1="170" x2="650" y2="226">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbe7f5"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2aa0ff"/>
+      <stop offset="1" stop-color="#0a58d6"/>
+    </linearGradient>
+    <linearGradient id="globe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9fd4ff"/>
+      <stop offset="1" stop-color="#2f86e8"/>
+    </linearGradient>
+    <linearGradient id="rack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f9fd"/>
+      <stop offset="1" stop-color="#c3d2e6"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e90ff"/>
+      <stop offset="1" stop-color="#4db2ff"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a7bff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#7cc4ff" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="divider" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1e7bff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#2fa4ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1e7bff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wedge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a7bff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#4db2ff" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="logoGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="dotGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="2.5"/>
+    </filter>
+    <clipPath id="round"><rect width="1200" height="450" rx="24"/></clipPath>
+    <clipPath id="globeClip"><circle cx="88" cy="98" r="50"/></clipPath>
+    <clipPath id="shieldClip"><path d="M100 0 L190 34 V100 C190 150 150 182 100 200 C50 182 10 150 10 100 V34 Z"/></clipPath>
+    <clipPath id="titleClip"><rect x="480" y="160" width="430" height="76"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <!-- ============ BACKGROUND ============ -->
+    <rect width="1200" height="450" fill="#05080f"/>
+    <rect width="1200" height="450" fill="url(#bgGlow)"/>
+    <rect width="1200" height="450" fill="url(#grid)" mask="url(#gridMask)"/>
+
+    <!-- data streams -->
+    <g>
+      <line x1="0" y1="92" x2="1200" y2="92" stroke="#2a7bff" stroke-opacity="0.08"/>
+      <line x1="0" y1="358" x2="1200" y2="358" stroke="#2a7bff" stroke-opacity="0.08"/>
+      <rect y="91" width="140" height="2" fill="url(#streak)">
+        <animate attributeName="x" values="-140;1200" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <rect y="357" width="180" height="2" fill="url(#streak)">
+        <animate attributeName="x" values="1200;-180" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- constellation (network nodes) -->
+    <g stroke="#2a7bff" stroke-opacity="0.28" stroke-width="1" fill="none">
+      <path d="M90 90 L170 150 L120 220"/>
+      <path d="M170 150 L300 96"/>
+      <path d="M930 120 L1000 230 L940 330"/>
+      <path d="M1000 230 L1120 262 L1070 338 L1000 230"/>
+    </g>
+    <g fill="#4db2ff">
+      <circle cx="90" cy="90" r="3"><animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/></circle>
+      <circle cx="170" cy="150" r="3.5"><animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="120" cy="220" r="3"><animate attributeName="opacity" values="1;0.3;1" dur="3.5s" repeatCount="indefinite"/></circle>
+      <circle cx="300" cy="96" r="2.5"/>
+      <circle cx="930" cy="120" r="3"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="230" r="4"><animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/></circle>
+      <circle cx="940" cy="330" r="3"/>
+      <circle cx="1120" cy="262" r="3"><animate attributeName="opacity" values="0.3;1;0.3" dur="3.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1070" cy="338" r="3"/>
+    </g>
+    <!-- packets travelling on the network -->
+    <g fill="#bfe3ff" filter="url(#dotGlow)">
+      <circle r="2.6"><animateMotion dur="4s" repeatCount="indefinite" path="M90 90 L170 150 L120 220"/></circle>
+      <circle r="2.6"><animateMotion dur="5s" repeatCount="indefinite" path="M930 120 L1000 230 L940 330"/></circle>
+      <circle r="2.6"><animateMotion dur="4.5s" begin="1s" repeatCount="indefinite" path="M1000 230 L1120 262 L1070 338"/></circle>
+    </g>
+
+    <!-- rising particles -->
+    <g fill="#5aa8ff">
+      <circle cx="240" cy="430" r="1.6"><animate attributeName="cy" values="440;20" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="12s" repeatCount="indefinite"/></circle>
+      <circle cx="560" cy="430" r="1.3"><animate attributeName="cy" values="440;30" dur="14s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="14s" begin="3s" repeatCount="indefinite"/></circle>
+      <circle cx="760" cy="430" r="1.8"><animate attributeName="cy" values="440;40" dur="11s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="11s" begin="1s" repeatCount="indefinite"/></circle>
+      <circle cx="880" cy="430" r="1.2"><animate attributeName="cy" values="440;60" dur="13s" begin="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.6;0" dur="13s" begin="5s" repeatCount="indefinite"/></circle>
+      <circle cx="1040" cy="430" r="1.5"><animate attributeName="cy" values="440;200" dur="10s" begin="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.8;0" dur="10s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="380" cy="430" r="1.4"><animate attributeName="cy" values="440;25" dur="15s" begin="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.7;0" dur="15s" begin="6s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <!-- ============ CORNER ARCS ============ -->
+    <circle cx="1200" cy="-66" r="240" fill="none" stroke="url(#arcTR)" stroke-width="26">
+      <animate attributeName="stroke-opacity" values="1;0.65;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="-66" r="272" fill="none" stroke="#2a7bff" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="2 10"/>
+    <circle cx="1200" cy="-66" r="206" fill="none" stroke="#2a7bff" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="0" cy="528" r="267" fill="none" stroke="url(#arcBL)" stroke-width="26">
+      <animate attributeName="stroke-opacity" values="0.7;1;0.7" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="528" r="299" fill="none" stroke="#2a7bff" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="2 10"/>
+    <circle cx="0" cy="528" r="233" fill="none" stroke="#2a7bff" stroke-opacity="0.3" stroke-width="1"/>
+    <!-- glowing dots running on the arcs -->
+    <g fill="#9fd4ff" filter="url(#dotGlow)">
+      <circle r="3.5"><animateMotion dur="7s" repeatCount="indefinite" path="M960 -66 A240 240 0 0 0 1200 174"/></circle>
+      <circle r="3.5"><animateMotion dur="8s" repeatCount="indefinite" path="M267 528 A267 267 0 0 0 0 261"/></circle>
+    </g>
+
+    <!-- ============ LOGO AURA ============ -->
+    <ellipse cx="395" cy="210" rx="115" ry="95" fill="#1e7bff" opacity="0.3" filter="url(#logoGlow)"/>
+    <g transform="translate(395 210)">
+      <!-- radar sweep -->
+      <path d="M0 0 L128 0 A128 128 0 0 1 108 69 Z" fill="url(#wedge)">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+      </path>
+      <!-- rings -->
+      <circle r="128" fill="none" stroke="#2a7bff" stroke-opacity="0.35" stroke-width="1"/>
+      <circle r="112" fill="none" stroke="#4db2ff" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 7">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="40s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="142" fill="none" stroke="#2a7bff" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="14 10">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="60s" repeatCount="indefinite"/>
+      </circle>
+      <!-- tick marks -->
+      <g stroke="#5aa8ff" stroke-opacity="0.6" stroke-width="1.5">
+        <line x1="0" y1="-134" x2="0" y2="-124"/>
+        <line x1="0" y1="134" x2="0" y2="124"/>
+        <line x1="-134" y1="0" x2="-124" y2="0"/>
+        <line x1="134" y1="0" x2="124" y2="0"/>
+      </g>
+    </g>
+
+    <!-- ============ LOGO ============ -->
+    <g transform="translate(321.7 137) scale(0.733)">
+      <path d="M205 105 C170 60, 60 85, -10 150" fill="none" stroke="url(#orbit)" stroke-width="3.5" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- shield -->
+      <path d="M100 0 L190 34 V100 C190 150 150 182 100 200 C50 182 10 150 10 100 V34 Z" fill="#06101f" stroke="url(#shield)" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M100 14 L174 41 V100 C174 142 142 168 100 184 C58 168 26 142 26 100 V41 Z" fill="none" stroke="#2aa0ff" stroke-opacity="0.35" stroke-width="1.5"/>
+      <path d="M0 0 L125 0 L55 230 L0 230 Z" fill="#fff" opacity="0.07" clip-path="url(#shieldClip)"/>
+
+      <!-- globe -->
+      <circle cx="88" cy="98" r="50" fill="#0a1d3d" fill-opacity="0.6"/>
+      <g fill="none" stroke="url(#globe)" stroke-width="3.6" stroke-linecap="round">
+        <circle cx="88" cy="98" r="50"/>
+        <g clip-path="url(#globeClip)">
+          <ellipse cx="88" cy="98" rx="24" ry="50">
+            <animate attributeName="rx" values="24;3;24" dur="8s" repeatCount="indefinite"/>
+          </ellipse>
+          <ellipse cx="88" cy="98" rx="3" ry="50">
+            <animate attributeName="rx" values="3;24;3" dur="8s" repeatCount="indefinite"/>
+          </ellipse>
+          <line x1="38" y1="98" x2="138" y2="98"/>
+          <path d="M42 72 Q88 86 134 72"/>
+          <path d="M42 124 Q88 138 134 124"/>
+        </g>
+      </g>
+
+      <!-- server rack -->
+      <g>
+        <rect x="100" y="118" width="68" height="18" rx="6" fill="url(#rack)"/>
+        <rect x="100" y="140" width="68" height="18" rx="6" fill="url(#rack)"/>
+        <rect x="100" y="162" width="68" height="18" rx="6" fill="url(#rack)"/>
+        <g stroke="#9fb4cf" stroke-width="1.6" stroke-linecap="round">
+          <line x1="110" y1="127" x2="136" y2="127"/>
+          <line x1="110" y1="149" x2="136" y2="149"/>
+          <line x1="110" y1="171" x2="136" y2="171"/>
+        </g>
+        <circle cx="156" cy="127" r="3.2" fill="#1e7bff"/>
+        <circle cx="156" cy="149" r="3.2" fill="#1e7bff">
+          <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="156" cy="171" r="3.2" fill="#1e7bff">
+          <animate attributeName="opacity" values="0.3;1;0.3" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+
+      <!-- front orbit swoosh + moving satellite -->
+      <path d="M-12 158 C20 200, 120 196, 206 108" fill="none" stroke="url(#orbit)" stroke-width="9" stroke-linecap="round"/>
+      <circle r="5.5" fill="#e0f2ff" filter="url(#dotGlow)">
+        <animateMotion dur="4s" repeatCount="indefinite" path="M-12 158 C20 200, 120 196, 206 108"/>
+      </circle>
+      <circle r="3" fill="#fff">
+        <animateMotion dur="4s" repeatCount="indefinite" path="M-12 158 C20 200, 120 196, 206 108"/>
+      </circle>
+    </g>
+
+    <!-- ============ TITLE ============ -->
+    <g fill="none" stroke="#1e7bff" stroke-width="11" stroke-linejoin="miter" opacity="0.55" filter="url(#glow)">
+      <rect x="660" y="216" width="66" height="9" fill="#1e7bff" stroke="none"/>
+      <path d="M739.5 176.5 V219.5 H776.5"/>
+      <path d="M793.5 176.5 L815 197 V219.5 M836.5 176.5 L815 197"/>
+      <path d="M847.5 176.5 L884.5 219.5 M884.5 176.5 L847.5 219.5"/>
+    </g>
+
+    <g fill="none" stroke-linejoin="miter" stroke-width="11">
+      <path d="M503.5 219.5 V176.5 H537 L540.5 180 V196 L537 199.5 H503.5" stroke="url(#whiteText)"/>
+      <path d="M557.5 219.5 V176.5 H591 L594.5 180 V196 L591 199.5 H557.5 M575 199.5 L594.5 219.5" stroke="url(#whiteText)"/>
+      <path d="M614.5 176.5 H645 L648.5 180 V216 L645 219.5 H614.5 L611.5 216 V180 Z" stroke="url(#whiteText)"/>
+    </g>
+    <rect x="660" y="216" width="66" height="9" fill="url(#blueText)"/>
+    <g fill="none" stroke="url(#blueText)" stroke-linejoin="miter" stroke-width="11">
+      <path d="M739.5 176.5 V219.5 H776.5"/>
+      <path d="M793.5 176.5 L815 197 V219.5 M836.5 176.5 L815 197"/>
+      <path d="M847.5 176.5 L884.5 219.5 M884.5 176.5 L847.5 219.5"/>
+    </g>
+
+    <!-- title accents: corner ticks -->
+    <g stroke="#2fa4ff" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M492 160 H504 M492 160 V172" opacity="0.8"/>
+      <path d="M906 238 H894 M906 238 V226" opacity="0.8"/>
+    </g>
+
+    <!-- shine -->
+    <g clip-path="url(#titleClip)">
+      <rect x="-200" y="150" width="120" height="100" fill="url(#sweep)" opacity="0.28" transform="skewX(-20)">
+        <animate attributeName="x" values="380;1000;1000" keyTimes="0;0.55;1" dur="7s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- ============ TAGLINE ============ -->
+    <g font-family="'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif" font-size="15" fill="#cfe0f5" font-weight="500">
+      <text x="522" y="263" textLength="55" lengthAdjust="spacing">FAST</text>
+      <circle cx="609" cy="258" r="2.8" fill="#1e7bff"/>
+      <text x="639" y="263" textLength="93" lengthAdjust="spacing">SECURE</text>
+      <circle cx="763" cy="258" r="2.8" fill="#1e7bff"/>
+      <text x="797" y="263" textLength="79" lengthAdjust="spacing">PROXY</text>
+    </g>
+
+    <!-- divider with diamond -->
+    <rect x="500" y="284" width="400" height="1.5" fill="url(#divider)"/>
+    <path d="M700 280 L705 285 L700 290 L695 285 Z" fill="#2fa4ff">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- spec chips -->
+    <g font-family="Consolas,'SF Mono','Courier New',monospace" font-size="12" font-weight="700" text-anchor="middle">
+      <g>
+        <rect x="409" y="304" width="112" height="26" rx="13" fill="#0a58d6" fill-opacity="0.18" stroke="#2a7bff" stroke-opacity="0.7"/>
+        <text x="465" y="321" fill="#9fd4ff">aes-256-gcm</text>
+      </g>
+      <g>
+        <rect x="533" y="304" width="80" height="26" rx="13" fill="#0a58d6" fill-opacity="0.18" stroke="#2a7bff" stroke-opacity="0.7"/>
+        <text x="573" y="321" fill="#9fd4ff">0 deps</text>
+      </g>
+      <g>
+        <rect x="625" y="304" width="64" height="26" rx="13" fill="#0a58d6" fill-opacity="0.18" stroke="#2a7bff" stroke-opacity="0.7"/>
+        <text x="657" y="321" fill="#9fd4ff">TCP</text>
+      </g>
+      <g>
+        <rect x="701" y="304" width="90" height="26" rx="13" fill="#0a58d6" fill-opacity="0.18" stroke="#2a7bff" stroke-opacity="0.7"/>
+        <text x="746" y="321" fill="#9fd4ff">Node 16+</text>
+      </g>
+    </g>
+
+    <!-- ============ HUD ============ -->
+    <g stroke="#2a7bff" stroke-opacity="0.7" stroke-width="2" fill="none" stroke-linecap="round">
+      <path d="M26 56 V26 H56"/>
+      <path d="M1174 394 V424 H1144"/>
+    </g>
+    <g font-family="Consolas,'SF Mono','Courier New',monospace" font-size="11" fill="#5aa8ff" letter-spacing="2">
+      <circle cx="74" cy="31" r="3.5" fill="#22c55e">
+        <animate attributeName="opacity" values="1;0.25;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <text x="86" y="35">ONLINE</text>
+      <text x="1136" y="428" text-anchor="end">AEAD · SS · TCP</text>
+    </g>
+
+    <!-- bottom light -->
+    <rect x="-300" y="446" width="300" height="4" fill="url(#sweep)" opacity="0.7">
+      <animate attributeName="x" values="-300;1200" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- border -->
+    <rect x="1" y="1" width="1198" height="448" rx="23" fill="none" stroke="#1e7bff" stroke-opacity="0.35" stroke-width="2"/>
+  </g>
+</svg>
